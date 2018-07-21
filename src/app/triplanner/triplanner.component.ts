@@ -7,12 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TriplannerComponent implements OnInit {
 
-  budgetOptions = ["1000$", "2000$", "5000$", "10,000$"]
-  selectedBudget 
+  public budgetOptions = ["1000$", "2000$", "5000$", "10,000$"];
+  public selectedBudget: string;
 
   constructor() { }
 
   ngOnInit() {
+    this.selectedBudget = "1000$";
   }
 
 }
