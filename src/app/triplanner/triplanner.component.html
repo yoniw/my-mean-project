@@ -1,0 +1,10 @@
+<p>
+  Select your budget
+</p>
+
+<select ng-model="selectedBudget">
+    <option *ngFor="let budget of budgetOptions">{{ budget }}</option>
+</select>
+
+<h1>You selected {{ selectedBudget }}</h1>
+ 

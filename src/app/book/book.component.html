@@ -1,12 +1,19 @@
 <div class="button-row">
+    <a mat-raised-button color="primary" [routerLink]="['/triplanner']"><mat-icon>flight_takeoff</mat-icon></a>
+  </div>
+
+<div class="button-row">
   <a mat-raised-button color="primary" [routerLink]="['/book-create']"><mat-icon>add</mat-icon></a>
 </div>
+
+
+
 <div class="example-container mat-elevation-z8">
   <table mat-table #table [dataSource]="dataSource">
-
+    
     <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-
+      The actual rendered columns are set as a property on the row definition" -->
+      
     <!-- Title Column -->
     <ng-container matColumnDef="isbn">
       <th mat-header-cell *matHeaderCellDef> ISBN </th>

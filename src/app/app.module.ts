@@ -23,6 +23,7 @@ import {
   MatButtonModule,
   MatCardModule,
   MatFormFieldModule } from "@angular/material";
+import { TriplannerComponent } from './triplanner/triplanner.component';
   
 const appRoutes: Routes = [
   {
@@ -48,6 +49,11 @@ const appRoutes: Routes = [
   { path: '',
     redirectTo: '/books',
     pathMatch: 'full'
+  },
+  {
+    path: 'triplanner',
+    component: TriplannerComponent,
+    data: {title: 'Triplanner'}
   }
 ];
 
@@ -57,7 +63,8 @@ const appRoutes: Routes = [
     BookComponent,
     BookDetailComponent,
     BookCreateComponent,
-    BookEditComponent
+    BookEditComponent,
+    TriplannerComponent
   ],
 imports: [
   RouterModule.forRoot(appRoutes),
