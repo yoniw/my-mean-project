@@ -5,6 +5,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 
 var apiRouter = require('./routes/book');
+var budgetRouter = require('./routes/budget');
 
 var app = express();
 
@@ -14,6 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'dist/my-mean-project')));
 app.use('/', express.static(path.join(__dirname, 'dist/my-mean-project')));
 app.use('/api', apiRouter);
+app.use('/budget', budgetRouter);
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/my-mean-project', { promiseLibrary: require('bluebird') })
